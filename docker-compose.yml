@@ -24,4 +24,11 @@ services:
     ports:
       - 8000-8005:8000-8005
       - 9000-9005:9000-9005
-
+      
+  pgsql:
+     container_name: pgsql
+     image: postgres:14.0
+     environment:
+      POSTGRES_PASSWORD: frappe
+     volumes:
+       - ./pgdata:/var/lib/postgresql/data
