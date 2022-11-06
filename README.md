@@ -16,7 +16,8 @@ bench --site mysite.localhost  reinstall  --db-root-username postgres --db-root-
 
 
 bench get-app healthcare.payments erpnext
-bench --site mysite.localhost install-app healthcare
+
+bench --site mysite.localhost install-app frappe erpnext
 
 Edit  currentsite.txt by your sitename
 
