@@ -21,6 +21,30 @@ bench --site mysite.localhost install-app frappe erpnext
 
 Edit  currentsite.txt by your sitename
 
+set Redis the values in common_site_config.json.
+
+```shell
+{
+"background_workers": 1,
+ "file_watcher_port": 6787,
+ "frappe_user": "frappe",
+ "gunicorn_workers": 3,
+ "live_reload": true,
+ "rebase_on_pull": false,
+ "redis_cache": "redis://redis-cache:6379",
+ "redis_queue": "redis://redis-queue:6379",
+ "redis_socketio": "redis://redis-socketio:6379",
+ "restart_supervisor_on_update": false,
+ "restart_systemd_on_update": false,
+ "serve_default_site": true,
+ "shallow_clone": true,
+ "socketio_port": 9000,
+ "use_redis_auth": false,
+ "webserver_port": 8000
+}
+```
+
+
 bench serve  --port 8001
 
 sudo lsof -nP -iTCP -sTCP:LISTEN | grep 8001
