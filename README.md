@@ -7,19 +7,8 @@ bench init --skip-redis-config-generation frappe-bench
 
 cd frappe-bench
 bench new-app  demo-app
-bench new-site mysite.localhost --db-type postgres --db-host pgsql --db-root-username postgres --db-root-password frappe --db-name frappe   --admin-password admin 
 
 ```
-
-bench --site mysite.localhost  reinstall  --db-root-username postgres --db-root-password frappe --db-name frappe   --admin-password admin 
-
-
-
-bench get-app healthcare.payments erpnext
-
-bench --site mysite.localhost install-app frappe erpnext
-
-Edit  currentsite.txt by your sitename
 
 set Redis the values in common_site_config.json.
 
@@ -42,7 +31,23 @@ set Redis the values in common_site_config.json.
  "use_redis_auth": false,
  "webserver_port": 8000
 }
+
 ```
+```shell
+
+bench new-site mysite.localhost --db-type postgres --db-host pgsql --db-root-username postgres --db-root-password frappe --db-name frappe   --admin-password admin 
+
+```
+
+bench --site mysite.localhost  reinstall  --db-root-username postgres --db-root-password frappe --db-name frappe   --admin-password admin 
+
+
+
+bench get-app healthcare payments erpnext
+
+bench --site mysite.localhost install-app frappe erpnext
+
+Edit  currentsite.txt by your sitename
 
 
 bench serve  --port 8001
