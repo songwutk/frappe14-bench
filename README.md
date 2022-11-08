@@ -33,6 +33,8 @@ set Redis the values in common_site_config.json.
 }
 
 ```
+
+For PostgreSQL database
 ```shell
 
 bench new-site mysite.localhost --db-type postgres --db-host pgsql --db-root-username postgres --db-root-password frappe --db-name frappe   --admin-password admin 
@@ -42,6 +44,12 @@ bench new-site mysite.localhost --db-type postgres --db-host pgsql --db-root-use
 bench --site mysite.localhost  reinstall  --db-root-username postgres --db-root-password frappe --db-name frappe   --admin-password admin 
 
 
+or 
+
+For MariaDB database
+```shell
+ bench new-site mysite.localhost --db-host [custom-db-host-ip] --db-port [custom-db-port] --db-root-password frappe --db-name frappe --admin-password admin
+```
 
 bench get-app healthcare payments erpnext
 
