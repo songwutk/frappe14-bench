@@ -25,10 +25,22 @@ services:
       - 8000-8005:8000-8005
       - 9000-9005:9000-9005
       
-  pgsql:
-     container_name: pgsql
-     image: postgres:14.0
+  #pgsql:
+  #   container_name: pgsql
+  #   image: postgres:14.0
+  #   environment:
+  #    POSTGRES_PASSWORD: frappe
+  #   volumes:
+  #     - ./pgdata:/var/lib/postgresql/data
+       
+  mariadb:
+     container_name: mariadb
+     image: mariadb:10.9.3
+     restart: always
      environment:
-      POSTGRES_PASSWORD: frappe
+        MYSQL_ROOT_PASSWORD: rootdocker
      volumes:
-       - ./pgdata:/var/lib/postgresql/data
+        - ./db/:/var/lib/mysql
+        - ./logs/mysql:/var/log/mysql
+     ports:
+        - 3306:3306
