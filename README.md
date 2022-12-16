@@ -51,6 +51,18 @@ For MariaDB database
  bench new-site mysite.localhost --db-host [custom-db-host-ip] --db-port [custom-db-port] --db-root-password frappe --db-name frappe --admin-password admin
 ```
 
+Example apps
+
+- payments
+- healthcare
+- payments
+- erpnext
+- hrms
+- lms
+- frappedesk
+- insights
+
+
 bench get-app healthcare payments erpnext
 
 bench --site mysite.localhost install-app frappe erpnext
