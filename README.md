@@ -88,18 +88,23 @@ in sites folder create file currentsite.txt by your sitename
 
 mysite.localhost
 
-
+```
 bench start  
+```
 You can access by browser at port 8000
 
 or  
 
+```
 bench serve  --port 8001
+```
 You can access by browser at port 8001
 
+```
 sudo lsof -nP -iTCP -sTCP:LISTEN | grep 8001
-
+```
 Inspect running process 
 
 username : administrator
+
 password : admin
