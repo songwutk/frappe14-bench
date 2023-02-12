@@ -80,7 +80,9 @@ bench get-app healthcare payments erpnext
 
 bench --site mysite.localhost install-app frappe erpnext
 
-create currentsite.txt by your sitename
+folder sites/mysite.localhost is created.
+
+in sites folder create file currentsite.txt by your sitename
 
 [ currentsite.txt ]
 mysite.localhost
