@@ -9,8 +9,11 @@ cd frappe-bench
 bench new-app  demo-app
 
 ```
+cd sites
 
 set Redis the values in common_site_config.json.
+
+replace all content by 
 
 ```shell
 {
@@ -32,9 +35,11 @@ set Redis the values in common_site_config.json.
  "webserver_port": 8000
 }
 
+Setup site to database server.
+
 ```
 
-For PostgreSQL database
+For PostgreSQL database 
 ```shell
 
 bench new-site mysite.localhost --db-type postgres --db-host pgsql --db-root-username postgres --db-root-password frappe --db-name frappe   --admin-password admin 
@@ -46,12 +51,17 @@ bench --site mysite.localhost  reinstall  --db-root-username postgres --db-root-
 
 or 
 
-For MariaDB database
+For MariaDB database (Recommend)
 ```shell
  bench new-site mysite.localhost --db-host [custom-db-host-ip] --db-port [custom-db-port] --db-root-password frappe --db-name frappe --admin-password admin
+
 ```
 
-Example apps
+If your db server config not match please rollback and try again.
+If sites/mysite.localhost exist, please delete before bench new-site again.
+
+
+Example apps, you can download by bench command.
 
 - payments
 - healthcare
@@ -62,14 +72,23 @@ Example apps
 - frappedesk
 - insights
 
-
 bench get-app healthcare payments erpnext
 
 bench --site mysite.localhost install-app frappe erpnext
 
-Edit  currentsite.txt by your sitename
+create currentsite.txt by your sitename
 
+[ currentsite.txt ]
+mysite.localhost
+
+
+bench start  
+You can access by browser at port 8000
+
+or  
 
 bench serve  --port 8001
+You can access by browser at port 8001
 
 sudo lsof -nP -iTCP -sTCP:LISTEN | grep 8001
+Inspect running process 
