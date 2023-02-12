@@ -52,8 +52,11 @@ bench --site mysite.localhost  reinstall  --db-root-username postgres --db-root-
 or 
 
 For MariaDB database (Recommend)
+
+bench new-site mysite.localhost --db-host [custom-db-host-ip] --db-port [custom-db-port] --db-root-password frappe --db-name frappe --admin-password admin
+
 ```shell
- bench new-site mysite.localhost --db-host [custom-db-host-ip] --db-port [custom-db-port] --db-root-password frappe --db-name frappe --admin-password admin
+ bench new-site mysite.localhost --db-host mariadb  --db-root-password rootdocker --db-name frappe --admin-password admin
 
 ```
 
@@ -92,3 +95,6 @@ You can access by browser at port 8001
 
 sudo lsof -nP -iTCP -sTCP:LISTEN | grep 8001
 Inspect running process 
+
+username : administrator
+password : admin
