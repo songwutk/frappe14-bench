@@ -98,6 +98,7 @@ bench serve  --port 8001
 You can access by browser at port 8001
 
 sudo lsof -nP -iTCP -sTCP:LISTEN | grep 8001
+
 Inspect running process 
 
 username : administrator
