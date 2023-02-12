@@ -85,6 +85,7 @@ folder sites/mysite.localhost is created.
 in sites folder create file currentsite.txt by your sitename
 
 [ currentsite.txt ]
+
 mysite.localhost
 
 
