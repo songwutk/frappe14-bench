@@ -111,8 +111,11 @@ password : admin
 
 FAQ : 
 1) After docker-compose down, frappe can't connect because internal docker ip was changed.
+
 Solution is connect mariadb server and change ip in tables 
 
 global_priv(host)
+
 db(host)
+
 and run "flush privileges" command
