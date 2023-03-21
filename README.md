@@ -92,6 +92,7 @@ or use bench command
 
 ```
 bench use mysite.localhost
+bench set-config developer_mode 1
 ```
 
 ```
