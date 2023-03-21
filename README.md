@@ -88,6 +88,12 @@ in sites folder create file currentsite.txt by your sitename
 
 mysite.localhost
 
+or use bench command
+
+```
+bench use mysite.localhost
+```
+
 ```
 bench start  
 ```
