@@ -120,7 +120,15 @@ FAQ :
 1) After docker-compose down, frappe can't connect because internal docker ip was changed.
 new ip is frappe@(new ip) in error message.
 
-Solution is connect mariadb server and change ip in tables 
+Solution is .. 
+
+- inspect your new docker network by command 
+
+```
+sudo docker network inspect frappe14-bench_default
+```
+
+- connect mariadb server and change ip in tables 
 
 global_priv(host)
 
