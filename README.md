@@ -128,6 +128,12 @@ Solution is ..
 sudo docker network inspect frappe14-bench_default
 ```
 
+look for 
+
+```
+"Name": "frappe-bench"
+```
+
 - connect mariadb server and change ip in tables 
 
 global_priv(host)
