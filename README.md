@@ -93,7 +93,11 @@ or use bench command
 ```
 bench use mysite.localhost
 bench set-config developer_mode 1
+bench clear-cache
+bench setup requirements --dev
 ```
+
+
 
 ```
 bench start  
